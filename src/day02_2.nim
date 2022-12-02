@@ -14,14 +14,6 @@ proc getResultFromLiteral(literal: string): Result =
   if literal == "Y": return Draw
   if literal == "Z": return WinRight
 
-proc `>`(moveLeft: MoveKind, moveRight: MoveKind): Result =
-  if moveLeft == moveRight: return Draw
-  if moveLeft == Rock and moveRight == Scissors: return WinLeft
-  if moveLeft == Paper and moveRight == Rock: return WinLeft
-  if moveLeft == Scissors and moveRight == Paper: return WinLeft
-
-  return WinRight
-
 proc calculateGameScore(moveLeft: MoveKind, gameResult: Result): int =
   result = 0
   
