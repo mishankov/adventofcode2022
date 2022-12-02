@@ -5,14 +5,14 @@ type
   Result = enum WinRight, WinLeft, Draw
 
 proc getMoveFromLiteral(literal: string): MoveKind =
-  if literal == "A" or literal == "X": return Rock
-  if literal == "B" or literal == "Y": return Paper
-  if literal == "C" or literal == "Z": return Scissors
+  if literal == "A": return Rock
+  if literal == "B": return Paper
+  if literal == "C": return Scissors
 
 proc getResultFromLiteral(literal: string): Result =
-  if literal == "A" or literal == "X": return WinLeft
-  if literal == "B" or literal == "Y": return Draw
-  if literal == "C" or literal == "Z": return WinRight
+  if literal == "X": return WinLeft
+  if literal == "Y": return Draw
+  if literal == "Z": return WinRight
 
 proc `>`(moveLeft: MoveKind, moveRight: MoveKind): Result =
   if moveLeft == moveRight: return Draw
