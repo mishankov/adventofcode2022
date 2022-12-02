@@ -32,5 +32,3 @@ proc solve*() =
 
 if isMainModule:
   solve()
-
-# 209481
