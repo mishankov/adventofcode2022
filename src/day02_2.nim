@@ -16,25 +16,25 @@ proc getResultFromLiteral(literal: string): Result =
 
 proc calculateGameScore(moveLeft: MoveKind, gameResult: Result): int =
   result = 0
-  
+
   case gameResult:
-    of WinRight: 
+    of WinRight:
       result += 6
       case moveLeft:
         of Rock: result += 2
         of Paper: result += 3
-        of Scissors:result += 1
-    of Draw: 
+        of Scissors: result += 1
+    of Draw:
       result += 3
       case moveLeft:
         of Rock: result += 1
         of Paper: result += 2
-        of Scissors:result += 3
+        of Scissors: result += 3
     of WinLeft:
       case moveLeft:
         of Rock: result += 3
         of Paper: result += 1
-        of Scissors:result += 2
+        of Scissors: result += 2
 
 proc solve*() =
   let data = newFileStream("data/day02.txt")
@@ -45,7 +45,8 @@ proc solve*() =
     let line = data.readLine()
     var leftLiteral, righLiteral: string
     if scanf(line, "$w $w", leftLiteral, righLiteral):
-      overallSum += calculateGameScore(leftLiteral.getMoveFromLiteral(), righLiteral.getResultFromLiteral())
+      overallSum += calculateGameScore(leftLiteral.getMoveFromLiteral(),
+          righLiteral.getResultFromLiteral())
 
   echo "2.2 Answer: ", overallSum
 if isMainModule:

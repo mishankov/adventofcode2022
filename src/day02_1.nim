@@ -23,7 +23,7 @@ proc calculateGameScore(moveLeft: MoveKind, moveRight: MoveKind): int =
     of Rock: result += 1
     of Paper: result += 2
     of Scissors: result += 3
-  
+
   case moveLeft > moveRight:
     of WinRight: result += 6
     of Draw: result += 3
@@ -38,7 +38,8 @@ proc solve*() =
     let line = data.readLine()
     var leftLiteral, righLiteral: string
     if scanf(line, "$w $w", leftLiteral, righLiteral):
-      overallSum += calculateGameScore(leftLiteral.getMoveFromLiteral(), righLiteral.getMoveFromLiteral())
+      overallSum += calculateGameScore(leftLiteral.getMoveFromLiteral(),
+          righLiteral.getMoveFromLiteral())
 
   echo "2.1 Answer: ", overallSum
 if isMainModule:

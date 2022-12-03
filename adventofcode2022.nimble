@@ -12,3 +12,6 @@ bin           = @["adventofcode2022"]
 # Dependencies
 
 requires "nim >= 1.6.10"
+
+task pretty, "Run nimpretty":
+  exec "nimpretty src/*.nim"

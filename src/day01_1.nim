@@ -9,13 +9,13 @@ proc solve*() =
   var maxAmount = 0
   while not data.atEnd():
     var line = data.readLine()
-    if line == "": 
+    if line == "":
       if currentAmount > maxAmount:
         maxAmount = currentAmount
 
       currentAmount = 0
       continue
-    
+
     currentAmount += parseInt(line)
 
   echo "1.1 Answer: ", maxAmount

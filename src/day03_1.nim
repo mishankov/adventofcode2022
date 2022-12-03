@@ -13,7 +13,7 @@ proc solve* =
   var sumPriority: int = 0
   while not data.atEnd():
     let line = data.readLine()
-    
+
     let firstHalf = line[0 ..< int(line.len / 2)]
     let secondHalf = line[int(line.len/2) .. ^1]
     var countedItems: seq[char] = @[]

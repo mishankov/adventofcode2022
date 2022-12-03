@@ -20,7 +20,7 @@ proc solve* =
       if item in secondLine and item in thirdLine:
         sumPriority += itemPriority(item)
         break
-    
+
 
   echo "3.2 Answer: ", sumPriority
 
