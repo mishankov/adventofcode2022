@@ -1,4 +1,5 @@
-import day01_1, day01_2, day02_1, day02_2, day03_1, day03_2, day04_1, day04_2
+import day01_1, day01_2, day02_1, day02_2, day03_1, day03_2, day04_1, day04_2,
+    day05_1, day05_2
 
 if isMainModule:
   day01_1.solve()
@@ -9,3 +10,5 @@ if isMainModule:
   day03_2.solve()
   day04_1.solve()
   day04_2.solve()
+  day05_1.solve()
+  day05_2.solve()
